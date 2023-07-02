@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ContactItem } from '../ContactItem/ContactItem';
+import ContactItem from '../ContactItem';
 
 import styles from './ContactList.module.css';
 
-export const ContactList = ({ contacts, onDeleteContact }) => (
+const ContactList = ({ contacts, onDeleteContact }) => (
   <ul className={styles.list}>
     {contacts.map(contact => (
       <ContactItem
@@ -27,3 +27,5 @@ ContactList.propTypes = {
   ).isRequired,
   onDeleteContact: PropTypes.func.isRequired,
 };
+
+export default ContactList;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './ContactItem.module.css';
 
-export const ContactItem = ({ contact, onDeleteContact }) => (
+const ContactItem = ({ contact, onDeleteContact }) => (
   <li className={styles.item}>
     <span className={styles.name}>
       {contact.name}: {contact.number}
@@ -25,3 +25,5 @@ ContactItem.propTypes = {
   }).isRequired,
   onDeleteContact: PropTypes.func.isRequired,
 };
+
+export default ContactItem;
